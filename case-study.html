@@ -375,6 +375,11 @@ html{scroll-behavior:auto}
   var L = {name:"Name",company:"Company",email:"Work email",phone:"Phone"};
   function el(id){ return document.getElementById(id); }
   function close(){ var d = el("book-dialog"); if (!d) return; if (d.close) d.close(); else d.removeAttribute("open"); }
+  function toast(text){ var t = document.createElement("div"); t.setAttribute("role","status"); t.textContent = text;
+    t.style.cssText = "position:fixed;left:16px;right:16px;bottom:calc(24px + env(safe-area-inset-bottom,0px));margin:0 auto;width:fit-content;max-width:min(520px,calc(100vw - 32px));box-sizing:border-box;text-align:center;transform:translateY(12px);z-index:2147483647;padding:14px 20px;background:#F4EDE0;color:#0F2E33;border:2px solid #EB5E2C;border-radius:6px;font:600 16px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif;pointer-events:none;opacity:0;transition:opacity .3s,transform .3s;box-shadow:0 12px 32px rgba(10,34,38,.35)";
+    document.body.appendChild(t);
+    requestAnimationFrame(function(){ t.style.opacity = "1"; t.style.transform = "none"; });
+    setTimeout(function(){ t.style.opacity = "0"; setTimeout(function(){ if (t.parentNode) t.parentNode.removeChild(t); }, 400); }, 5000); }
   document.addEventListener("click", function(e){
     var t = e.target; if (!t || !t.closest) return;
     var a = t.closest('a[href="#book"]');
@@ -400,7 +405,7 @@ html{scroll-behavior:auto}
       body: JSON.stringify({ access_key: FORM_KEY, subject: "Book a call: " + f.company.value.trim(), from_name: "Stark GTM website",
         name: f.name.value.trim(), company: f.company.value.trim(), email: f.email.value.trim(), phone: f.phone.value.trim(), page: location.href }) })
     .then(function(r){ if (!r.ok) throw new Error("status " + r.status); return r.json(); })
-    .then(function(d){ if (!d || d.success === false) throw new Error("rejected"); form.reset(); msg.textContent = "Thank you. Your request is in, and we will be in touch shortly."; })
+    .then(function(d){ if (!d || d.success === false) throw new Error("rejected"); form.reset(); msg.textContent = ""; close(); toast("Your request has been sent. We will be in touch shortly."); })
     .catch(function(){ msg.textContent = "That did not go through. Please try again or write to " + MAIL + "."; })
     .then(function(){ send.disabled = false; });
   });
