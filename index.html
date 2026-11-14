@@ -76,34 +76,37 @@ html{scroll-behavior:auto}
 }
 @media (prefers-reduced-motion: reduce){.dp1,.dp2,.dp3,.dp4,.dp5,.dp6,.dp7{animation:none !important}}
 .dpath{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));column-gap:16px;row-gap:40px}
-@media (max-width: 1000px){.dpath{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px}.dp-bar{display:none}.dpath li:last-child{grid-column:1 / -1}}
+@media (max-width: 1100px){.dpath{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px}.dp-bar{display:none}.dpath li:last-child{grid-column:1 / -1}.dpath h3{min-height:0 !important}}
 .lnk{color:rgba(244,237,224,0.78);text-decoration:none}
 .lnk:hover{color:#F4EDE0}
 .btn{background:#EB5E2C;transition:background 160ms ease,transform 160ms ease}
 .btn:hover{background:#F47A4E;transform:translateY(-2px)}
 .job{transition:background 200ms ease}
-.job:hover{background:rgba(15,46,51,0.05)}
+.job:hover{background:#E9E3D7}
 .job h3{transition:transform 200ms ease}
 .job:hover h3{transform:translateX(8px)}
 @supports (animation-timeline: view()){.rv2{animation-range:entry 12% entry 70%}.rv3{animation-range:entry 24% entry 85%}}
 @media (min-width: 900px){.step2{margin-top:56px}.step3{margin-top:112px}}
-@media (max-width: 760px){.nav{display:none !important}}
+@media (max-width: 900px){.nav{display:none !important}}
+.nav a{white-space:nowrap}
+p{text-wrap:pretty}
+@media (max-width: 899px){.g2g{grid-template-columns:minmax(0,1fr) !important}}
 @media (prefers-reduced-motion: reduce){.btn,.job,.job h3{transition:none}.btn:hover,.job:hover h3{transform:none}}
 </style>
 <div style="background: #0F2E33; color: #F4EDE0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 17px; line-height: 1.6; min-width: 0">
 
 <header style="position: sticky; top: 0; z-index: 10; background: #0F2E33; border-bottom: 1px solid rgba(244,237,224,0.12)">
 <div style="max-width: 1240px; margin: 0 auto; padding: 12px clamp(20px, 5vw, 72px); display: flex; align-items: center; justify-content: space-between; gap: 24px">
-<a href="/" onclick="window.scrollTo(0,0);return false" class="lnk" style="display: flex; align-items: center; gap: 12px; min-height: 44px">
+<a href="#top" class="lnk" style="display: flex; align-items: center; gap: 12px; min-height: 44px">
 <svg aria-hidden="true" width="28" height="30" style="display: block; flex: 0 0 auto" xmlns="http://www.w3.org/2000/svg" viewBox="-117 -117 2911 3162"><g fill="#F4EDE0"><path d="M2776.5,3353.3C2780.9,3352.7 2789.7,3351.6 2796.0,3351.0C2806.4,3349.9 2812.3,3349.1 2833.0,3346.0C2849.5,3343.5 2865.4,3340.5 2885.0,3336.1C2972.0,3316.5 3062.2,3278.8 3139.2,3229.9C3198.0,3192.5 3255.2,3144.6 3302.8,3092.5C3392.0,2995.1 3455.3,2883.7 3491.5,2760.5C3498.9,2735.2 3508.0,2697.3 3512.0,2674.5C3515.3,2656.1 3516.1,2651.0 3517.9,2638.5C3520.6,2619.0 3521.7,2609.4 3525.2,2571.0C3526.9,2552.8 3526.9,2469.3 3525.2,2450.5C3522.5,2420.9 3519.5,2394.0 3517.0,2378.5C3513.5,2356.6 3512.5,2350.9 3509.8,2337.5C3505.3,2315.2 3505.4,2315.7 3501.5,2299.5C3493.4,2265.6 3480.2,2224.6 3465.5,2187.5C3432.9,2105.2 3386.4,2028.4 3328.2,1960.5C3302.3,1930.3 3271.8,1899.6 3244.9,1876.5C3218.2,1853.6 3222.7,1856.7 2890.3,1633.3L2851.1,1607.0L2656.7,1607.0C2448.4,1607.0 2456.9,1606.8 2462.3,1611.7C2463.5,1612.9 2475.1,1620.9 2488.0,1629.6C2522.0,1652.4 2550.0,1671.2 2607.0,1709.6C2634.8,1728.3 2687.2,1763.6 2723.5,1788.0C2807.0,1844.1 2872.7,1888.3 2942.5,1935.5C2972.8,1956.0 3009.4,1980.7 3024.0,1990.5C3038.6,2000.2 3057.3,2013.4 3065.6,2019.6C3102.7,2047.5 3136.5,2079.9 3166.5,2116.5C3237.4,2202.9 3281.0,2305.6 3296.9,2424.0C3297.8,2431.0 3298.5,2436.9 3301.0,2462.8C3302.3,2476.2 3302.3,2545.0 3301.0,2559.9C3294.7,2631.3 3282.5,2686.7 3260.0,2745.5C3194.3,2917.4 3052.3,3051.9 2878.5,3106.9C2833.9,3121.0 2788.1,3129.5 2737.5,3133.0C2727.3,3133.7 2473.5,3134.0 1942.8,3134.0C1235.4,3134.0 1163.0,3133.9 1161.6,3132.4C1160.2,3131.0 1160.0,3114.9 1160.0,2970.0C1160.0,2825.1 1160.2,2809.0 1161.6,2807.6C1163.0,2806.1 1234.2,2806.0 1929.8,2806.0C2594.3,2806.0 2698.0,2805.8 2708.0,2804.5C2781.3,2795.3 2839.2,2766.8 2888.6,2715.8C2923.8,2679.5 2950.3,2630.8 2961.9,2581.0C2965.5,2565.6 2966.4,2560.2 2969.0,2540.7C2970.3,2530.6 2970.3,2484.0 2969.0,2474.7C2968.4,2470.7 2967.5,2464.3 2966.9,2460.5C2962.4,2429.8 2952.3,2398.0 2938.4,2370.0C2923.7,2340.6 2907.6,2318.0 2885.8,2295.9C2865.6,2275.5 2877.0,2283.6 2707.0,2169.2C2663.3,2139.8 2620.1,2110.7 2611.0,2104.5C2601.9,2098.4 2558.5,2069.0 2514.5,2039.3C2470.5,2009.5 2420.6,1975.8 2403.5,1964.2C2386.4,1952.6 2334.5,1917.5 2288.0,1886.0C2241.5,1854.6 2174.5,1809.2 2139.0,1785.2C1980.6,1677.9 1882.3,1611.4 1789.0,1548.5C1667.6,1466.7 1661.9,1462.8 1653.8,1455.2C1640.6,1442.7 1632.5,1427.9 1629.4,1410.7C1627.6,1400.4 1627.6,1395.6 1629.4,1385.5C1632.1,1370.4 1637.7,1358.2 1647.2,1346.9C1655.6,1336.8 1666.5,1329.6 1681.7,1324.3L1689.5,1321.5L2026.0,1321.0C2279.4,1320.5 2365.3,1320.1 2374.0,1319.2C2380.3,1318.5 2391.1,1317.5 2398.0,1316.9C2417.3,1315.4 2436.3,1313.0 2470.5,1307.9C2487.6,1305.4 2511.8,1300.8 2533.5,1296.0C2704.6,1257.9 2870.5,1173.7 3014.0,1052.1C3058.0,1014.8 3107.6,965.4 3145.3,921.2C3150.2,915.6 3154.6,910.9 3155.3,910.9C3158.2,910.6 3159.9,911.7 3170.0,920.3C3175.9,925.4 3200.0,946.0 3223.6,966.1C3247.2,986.3 3279.1,1013.5 3294.5,1026.7C3327.8,1055.1 3328.6,1055.8 3330.1,1054.3C3331.3,1053.1 3332.5,1047.6 3334.0,1036.5C3334.6,1032.7 3335.9,1023.4 3337.0,1016.0C3338.1,1008.6 3339.5,999.4 3340.0,995.5C3340.5,991.6 3341.4,985.8 3341.9,982.5C3342.4,979.2 3343.1,974.5 3343.5,972.0C3343.8,969.5 3345.0,962.1 3346.0,955.5C3347.0,948.9 3348.4,939.9 3349.0,935.5C3350.3,926.0 3351.6,917.3 3353.0,908.7C3354.1,902.1 3356.6,884.7 3358.1,874.0C3358.6,870.4 3359.4,864.8 3359.9,861.5C3360.4,858.2 3361.4,852.1 3362.0,848.0C3362.6,843.9 3363.5,838.0 3364.0,835.0C3364.5,832.0 3365.4,826.1 3366.0,822.0C3366.6,817.9 3367.5,812.0 3368.0,809.0C3368.5,806.0 3369.4,800.1 3370.0,796.0C3370.6,791.9 3371.6,785.8 3372.1,782.5C3372.6,779.2 3373.5,773.4 3374.0,769.5C3374.5,765.6 3375.4,759.8 3375.9,756.5C3376.4,753.2 3377.3,747.4 3377.9,743.5C3379.1,735.7 3382.7,712.6 3384.0,704.0C3385.2,696.4 3389.0,670.8 3390.1,663.0C3390.6,659.4 3391.4,653.8 3391.9,650.5C3392.4,647.2 3393.4,641.1 3394.0,637.0C3394.6,632.9 3395.5,627.0 3396.0,624.0C3396.5,621.0 3397.4,615.1 3398.0,611.0C3398.6,606.9 3399.5,601.0 3400.0,598.0C3401.2,590.1 3405.0,564.5 3406.0,557.5C3406.8,551.9 3408.0,543.8 3410.0,531.0C3410.5,528.0 3411.4,522.1 3412.0,518.0C3412.6,513.9 3413.5,508.0 3414.0,505.0C3414.5,502.0 3415.4,496.1 3416.0,492.0C3416.6,487.9 3417.5,482.0 3418.0,479.0C3418.5,476.0 3419.4,470.1 3420.0,466.0C3420.6,461.9 3421.5,456.0 3422.0,453.0C3422.5,450.0 3423.3,444.1 3424.0,440.0C3424.6,435.9 3425.3,431.8 3425.5,430.9C3425.8,430.1 3425.4,428.5 3424.6,427.5C3422.8,425.0 3444.4,418.7 3212.0,490.1C3108.3,522.0 2993.3,557.3 2956.5,568.6C2860.8,598.0 2815.8,612.0 2813.8,613.1C2810.2,615.1 2812.0,617.8 2823.8,627.8C2830.2,633.3 2845.4,646.3 2857.6,656.7C2869.7,667.0 2886.8,681.6 2895.6,689.1C2904.3,696.5 2927.2,716.0 2946.5,732.4C2982.8,763.3 2985.0,765.3 2985.0,767.6C2985.0,772.1 2915.3,843.5 2885.5,869.4C2820.7,925.9 2756.5,969.8 2686.7,1005.1C2592.1,1053.0 2489.7,1083.6 2386.5,1094.9C2370.4,1096.7 2353.8,1097.9 2338.0,1098.5C2329.5,1098.9 2177.4,1099.3 2000.0,1099.5C1769.4,1099.7 1675.4,1100.2 1670.0,1101.0C1665.9,1101.6 1659.3,1102.5 1655.5,1103.1C1582.5,1113.9 1515.5,1152.6 1469.3,1210.7C1443.9,1242.6 1425.2,1280.5 1415.0,1320.5C1407.9,1348.3 1405.7,1366.8 1405.7,1398.0C1405.8,1432.3 1409.1,1455.5 1418.5,1486.4C1435.5,1542.5 1471.8,1596.2 1516.0,1630.7C1519.6,1633.5 1542.1,1648.9 1566.0,1665.0C1633.3,1710.3 1730.3,1775.9 1815.8,1833.8C1823.6,1839.1 1845.0,1853.6 1863.3,1865.9C1881.5,1878.2 1915.4,1901.1 1938.5,1916.8C1961.6,1932.5 1994.5,1954.8 2011.5,1966.3C2028.5,1977.9 2054.2,1995.3 2068.5,2005.0C2098.5,2025.4 2201.1,2094.8 2276.0,2145.4C2304.3,2164.5 2353.6,2197.8 2385.5,2219.3C2417.4,2240.9 2475.9,2280.4 2515.5,2307.1C2723.9,2447.8 2710.6,2438.5 2722.5,2450.5C2728.0,2456.0 2734.0,2463.1 2735.9,2466.2C2753.9,2497.0 2750.4,2534.3 2727.1,2560.1C2717.4,2570.9 2703.2,2579.4 2689.6,2582.5C2684.0,2583.8 2576.5,2584.0 1810.7,2584.2C1096.2,2584.5 937.9,2584.7 936.8,2585.8C934.8,2587.8 934.9,3350.9 936.9,3353.4C938.2,3354.9 1000.4,3355.0 1853.4,3354.7C2521.9,3354.5 2770.7,3354.1 2776.5,3353.3Z M1916.8,2299.2C1920.0,2297.1 1925.1,2300.8 1825.7,2234.0C1801.6,2217.8 1771.2,2197.3 1758.2,2188.5C1745.2,2179.7 1703.7,2151.7 1666.0,2126.4C1628.3,2101.0 1577.5,2066.8 1553.0,2050.3C1528.5,2033.9 1492.5,2009.6 1473.0,1996.5C1292.5,1875.1 1296.6,1878.0 1270.8,1855.5C1196.1,1790.6 1139.2,1705.7 1106.9,1611.0C1088.8,1558.0 1078.4,1506.0 1073.0,1442.0C1071.7,1426.1 1071.7,1364.9 1073.0,1350.5C1073.6,1344.5 1074.5,1334.3 1075.1,1328.0C1083.7,1233.6 1115.2,1136.7 1163.1,1057.3C1188.6,1015.1 1213.0,983.9 1248.5,948.4C1280.5,916.3 1303.7,897.2 1338.0,874.5C1362.6,858.2 1373.8,851.6 1396.5,839.9C1455.4,809.6 1517.4,789.5 1584.2,779.1C1598.9,776.8 1603.9,776.1 1613.5,775.1C1619.0,774.5 1628.0,773.5 1633.5,772.8C1641.1,771.9 1733.3,771.5 2024.8,771.3C2387.2,770.9 2406.2,770.8 2407.8,769.2C2408.8,768.2 2421.0,751.4 2434.9,732.0C2448.9,712.5 2469.8,683.2 2481.4,667.0C2539.9,585.5 2562.0,554.1 2562.0,552.7C2562.0,551.9 2561.3,550.9 2560.4,550.6C2557.6,549.5 1648.8,549.9 1632.0,551.0C1594.5,553.4 1577.1,555.3 1544.5,560.6C1409.8,582.2 1284.8,635.0 1177.5,715.6C1090.7,780.8 1022.7,856.4 967.6,949.0C926.9,1017.3 894.9,1096.3 876.1,1174.5C873.8,1183.8 871.5,1193.3 871.0,1195.5C864.1,1224.0 856.4,1273.8 853.1,1311.0C850.3,1342.5 849.7,1356.7 849.7,1394.2C849.8,1431.9 850.2,1441.4 853.1,1476.0C856.6,1518.3 864.5,1566.2 875.0,1609.7C916.3,1779.5 1007.2,1924.1 1143.3,2036.3C1170.0,2058.3 1188.7,2071.8 1248.8,2112.1C1332.3,2168.1 1360.0,2186.8 1413.5,2222.9C1502.2,2282.9 1524.8,2298.0 1527.2,2298.9C1530.1,2300.1 1915.0,2300.3 1916.8,2299.2Z" transform="translate(-849,-426)"/></g></svg>
 <span style="font-family: 'Bricolage Grotesque', 'Arial Narrow', Arial, sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em; color: #F4EDE0">Stark GTM</span>
 </a>
 <div style="display: flex; align-items: center; gap: 36px">
 <nav class="nav" aria-label="Main" style="display: flex; align-items: center; gap: 32px; font-size: 15px; font-weight: 500">
-<a class="lnk" href="#method">Method</a>
 <a class="lnk" href="#offer">What you get</a>
 <a class="lnk" href="#about">About</a>
-<a class="lnk" href="#start">90 days</a>
+<a class="lnk" href="#start">How to start</a>
+<a class="lnk" href="#method">Method</a>
 <a class="lnk" href="#faq">FAQ</a>
 </nav>
 <a class="btn" href="#book" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 4px; color: #0A2226; font-weight: 700; font-size: 15px; text-decoration: none; white-space: nowrap">Book a call</a>
@@ -123,164 +126,15 @@ html{scroll-behavior:auto}
 <div class="col colB" style="animation-duration: 22s; animation-delay: -13s"></div>
 <div class="col colC" style="animation-duration: 20s; animation-delay: -1s"></div>
 </div>
-<div style="position: relative; width: 100%; max-width: 1240px; margin: 0 auto; padding: clamp(96px, 12vw, 160px) clamp(20px, 5vw, 72px) clamp(24px, 3vw, 40px)">
+<div style="position: relative; width: 100%; max-width: 1240px; margin: 0 auto; padding: clamp(96px, 12vw, 160px) clamp(20px, 5vw, 72px) clamp(72px, 9vw, 128px)">
 <h1 class="rise" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(46px, 7vw, 108px); line-height: 1; letter-spacing: -0.01em">
-<span style="display: block">Your first year in DACH,</span>
-<span style="display: block; text-align: right; color: rgba(244,237,224,0.66)">run by someone who sells.</span>
+<span style="display: block">Europe’s major league.</span>
+<span style="display: block; text-align: right; color: rgba(244,237,224,0.66)">Play it right.</span>
 </h1>
 <div class="rise d1" style="margin-top: clamp(40px, 5vw, 64px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px 48px">
-<p style="margin: 0; max-width: 540px; font-size: clamp(18px, 1.5vw, 21px); line-height: 1.5; color: rgba(244,237,224,0.85)">Fractional GTM partner for B2B tech companies entering Germany, Austria and Switzerland.</p>
+<p style="margin: 0; max-width: 540px; font-size: clamp(18px, 1.5vw, 21px); line-height: 1.5; color: rgba(244,237,224,0.85)">Germany is Europe’s largest economy and one of the most complex globally. Tell us where you want to stand in DACH and we deliver.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px 16px">
-<a href="#method" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 28px; border: 1.5px solid rgba(244,237,224,0.7); border-radius: 4px; background: rgba(15,46,51,0.55); font-weight: 600; font-size: 18px; text-decoration: none">See how it works</a>
 <a href="#book" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 30px; background: #EB5E2C; color: #0F2E33; font-weight: 700; font-size: 19px; text-decoration: none; border-radius: 4px">Book a call</a>
-</div>
-</div>
-<div class="rise d2" style="margin-top: clamp(80px, 10vw, 144px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); border-top: 1px solid rgba(244,237,224,0.2)">
-<div style="padding: 24px 24px 32px 0; display: flex; flex-direction: column; gap: 4px">
-<div style="font-size: 15px; font-weight: 600; color: rgba(244,237,224,0.66)">Time</div>
-<div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 22px; line-height: 1.25">2 days a week</div>
-</div>
-<div style="padding: 24px 24px 32px 0; display: flex; flex-direction: column; gap: 4px">
-<div style="font-size: 15px; font-weight: 600; color: rgba(244,237,224,0.66)">Start</div>
-<div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 22px; line-height: 1.25">90-day test phase</div>
-</div>
-<div style="padding: 24px 0 32px 0; display: flex; flex-direction: column; gap: 4px">
-<div style="font-size: 15px; font-weight: 600; color: rgba(244,237,224,0.66)">Commitment</div>
-<div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 22px; line-height: 1.25">First meetings within three months</div>
-</div>
-</div>
-</div>
-</section>
-
-<div style="background: #F4EDE0; color: #0F2E33">
-
-<section aria-label="Positioning" style="padding: clamp(96px, 13vw, 184px) 0 clamp(80px, 10vw, 136px)">
-<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px)">
-<p class="reveal" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(36px, 5.6vw, 84px); line-height: 1.02; letter-spacing: -0.01em; color: rgba(15,46,51,0.58)">Everyone hands you a DACH strategy.</p>
-<p class="reveal" style="margin: 6px 0 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(36px, 5.6vw, 84px); line-height: 1.02; letter-spacing: -0.01em; text-align: right">Stark GTM sells it.</p>
-<p style="margin: clamp(56px, 7vw, 96px) auto 0; max-width: 820px; text-align: center; font-size: clamp(20px, 1.9vw, 26px); line-height: 1.5; color: rgba(15,46,51,0.85)">We design your DACH strategy, sell it in German and help you build the team that takes over.</p>
-</div>
-</section>
-
-<section id="problem" style="background: #F4EDE0">
-<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px) clamp(72px, 9vw, 128px)">
-<div style="border-top: 1px solid rgba(15,46,51,0.18); padding-top: clamp(56px, 7vw, 96px); display: flex; flex-wrap: wrap; gap: 48px 80px">
-<div style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
-<h2 class="reveal" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.8vw, 52px); line-height: 1.05; letter-spacing: -0.01em">Most foreign B2B tech companies pay for their first year in DACH twice.</h2>
-<p style="margin: 0; max-width: 480px; color: #3F5A5E">Not because your product is wrong. Because your launch runs on a playbook built for another market, led by people you can’t judge.</p>
-</div>
-<div style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column">
-<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column">
-<li class="reveal" style="display: flex; gap: 20px; align-items: baseline; padding: 18px 0; border-bottom: 1px solid rgba(15,46,51,0.18)"><span style="flex: 0 0 28px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 15px; color: #5C7478; font-variant-numeric: tabular-nums">01</span><span style="font-size: 19px; line-height: 1.4">You put a seller proven in another market in charge.</span></li>
-<li class="reveal" style="display: flex; gap: 20px; align-items: baseline; padding: 18px 0; border-bottom: 1px solid rgba(15,46,51,0.18)"><span style="flex: 0 0 28px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 15px; color: #5C7478; font-variant-numeric: tabular-nums">02</span><span style="font-size: 19px; line-height: 1.4">Nobody can judge the German candidates.</span></li>
-<li class="reveal" style="display: flex; gap: 20px; align-items: baseline; padding: 18px 0; border-bottom: 1px solid rgba(15,46,51,0.18)"><span style="flex: 0 0 28px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 15px; color: #5C7478; font-variant-numeric: tabular-nums">03</span><span style="font-size: 19px; line-height: 1.4">Your team slides into firefighting.</span></li>
-<li class="reveal" style="display: flex; gap: 20px; align-items: baseline; padding: 18px 0; border-bottom: 1px solid rgba(15,46,51,0.18)"><span style="flex: 0 0 28px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 15px; color: #5C7478; font-variant-numeric: tabular-nums">04</span><span style="font-size: 19px; line-height: 1.4">Belief in the product fades, and your best people leave.</span></li>
-<li class="reveal" style="display: flex; gap: 20px; align-items: baseline; padding: 18px 0"><span style="flex: 0 0 28px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 15px; color: #5C7478; font-variant-numeric: tabular-nums">05</span><span style="font-size: 19px; line-height: 1.4">You hire again, still without a way to judge.</span></li>
-</ol>
-<div class="reveal" style="margin-top: 16px; background: #0F2E33; color: #F4EDE0; padding: 28px 32px; border-radius: 4px; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(24px, 2.4vw, 30px); line-height: 1.15; letter-spacing: -0.01em">You can’t hire what you can’t judge.</div>
-</div>
-</div>
-</div>
-</section>
-
-<section id="buyers" style="padding: 0 0 clamp(88px, 11vw, 152px)">
-<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px)">
-<div style="border-top: 1px solid rgba(15,46,51,0.16); padding-top: clamp(88px, 11vw, 152px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 24px clamp(48px, 7vw, 112px); align-items: end">
-<h2 class="reveal" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(36px, 4.2vw, 60px); line-height: 1.04; letter-spacing: -0.01em; text-wrap: balance">What German buyers actually say.</h2>
-<p class="reveal" style="margin: 0; max-width: 560px; font-size: 20px; line-height: 1.5; color: rgba(15,46,51,0.82)">Every market has its own brush-offs, buying signals and red flags. We tell them apart for you, in German, on the first call.</p>
-</div>
-</div>
-<div class="marquee reveal" style="margin-top: clamp(48px, 6vw, 72px)">
-<div class="marquee-track" style="display: flex; width: max-content">
-<div style="display: flex; gap: 20px; padding-right: 20px">
-<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
-<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Schicken Sie mir mal Unterlagen.“</blockquote>
-<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“Send me some material.” Usually a polite way off the call.</figcaption>
-</figure>
-<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
-<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Wo liegen Ihre Daten?“</blockquote>
-<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“Where is your data hosted?” Often the first real buying question.</figcaption>
-</figure>
-<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
-<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Das müssen wir intern abstimmen.“</blockquote>
-<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“We need to align internally.” There’s a buying committee you haven’t met yet.</figcaption>
-</figure>
-<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
-<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Haben Sie Referenzen aus Deutschland?“</blockquote>
-<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“Do you have German references?” Your US logos rarely count here.</figcaption>
-</figure>
-<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
-<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Melden Sie sich im neuen Quartal.“</blockquote>
-<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“Call me next quarter.” Sometimes a real date. Usually not.</figcaption>
-</figure>
-<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
-<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Gibt es den Vertrag auch auf Deutsch?“</blockquote>
-<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“Is the contract available in German?” Procurement is already involved.</figcaption>
-</figure>
-<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
-<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Wer ist Ihr Ansprechpartner vor Ort?“</blockquote>
-<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“Who is your local contact?” They want someone who will still be there next year.</figcaption>
-</figure>
-</div>
-<div aria-hidden="true" style="display: flex; gap: 20px; padding-right: 20px">
-<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
-<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Schicken Sie mir mal Unterlagen.“</blockquote>
-<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“Send me some material.” Usually a polite way off the call.</figcaption>
-</figure>
-<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
-<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Wo liegen Ihre Daten?“</blockquote>
-<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“Where is your data hosted?” Often the first real buying question.</figcaption>
-</figure>
-<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
-<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Das müssen wir intern abstimmen.“</blockquote>
-<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“We need to align internally.” There’s a buying committee you haven’t met yet.</figcaption>
-</figure>
-<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
-<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Haben Sie Referenzen aus Deutschland?“</blockquote>
-<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“Do you have German references?” Your US logos rarely count here.</figcaption>
-</figure>
-<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
-<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Melden Sie sich im neuen Quartal.“</blockquote>
-<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“Call me next quarter.” Sometimes a real date. Usually not.</figcaption>
-</figure>
-<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
-<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Gibt es den Vertrag auch auf Deutsch?“</blockquote>
-<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“Is the contract available in German?” Procurement is already involved.</figcaption>
-</figure>
-<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
-<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Wer ist Ihr Ansprechpartner vor Ort?“</blockquote>
-<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“Who is your local contact?” They want someone who will still be there next year.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-
-</div>
-
-<section id="method" style="background: #0F2E33; color: #F4EDE0">
-<div style="max-width: 1240px; margin: 0 auto; padding: clamp(72px, 9vw, 128px) clamp(20px, 5vw, 72px); display: flex; flex-direction: column; gap: clamp(40px, 5vw, 64px)">
-<div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 24px 80px">
-<div style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
-<h2 class="reveal" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(40px, 5.4vw, 76px); line-height: 1; letter-spacing: -0.01em">Goal-to-Ground</h2>
-</div>
-<p style="flex: 1 1 400px; min-width: 0; margin: 0; color: rgba(244,237,224,0.82)">Everyone knows a strategy should reach the front line. Almost no one builds it per market. We build yours for DACH, prove it with real buyers and adjust it every week.</p>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 20px; align-items: start">
-<div class="reveal" style="border-top: 4px solid #EB5E2C; background: #14383E; padding: 28px 28px 32px; display: flex; flex-direction: column; gap: 14px">
-<div style="font-size: 15px; font-weight: 600; color: rgba(244,237,224,0.7)">Level 1</div>
-<h3 style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 36px; line-height: 1; letter-spacing: -0.01em">Goal</h3>
-<p style="margin: 0; font-size: 16px; color: rgba(244,237,224,0.82)">We pin down where you want to stand in DACH: revenue target, legal setup, local entity or not.</p>
-</div>
-<div class="step2 reveal rv2" style="border-top: 4px solid #EB5E2C; background: #14383E; padding: 28px 28px 32px; display: flex; flex-direction: column; gap: 14px">
-<div style="font-size: 15px; font-weight: 600; color: rgba(244,237,224,0.7)">Level 2</div>
-<h3 style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 36px; line-height: 1; letter-spacing: -0.01em">Plan</h3>
-<p style="margin: 0; font-size: 16px; color: rgba(244,237,224,0.82)">We map what your next 12 to 24 months have to deliver: team size, partnerships, product adjustments.</p>
-</div>
-<div class="step3 reveal rv3" style="border-top: 4px solid #EB5E2C; background: #14383E; padding: 28px 28px 32px; display: flex; flex-direction: column; gap: 14px">
-<div style="font-size: 15px; font-weight: 600; color: rgba(244,237,224,0.7)">Level 3</div>
-<h3 style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 36px; line-height: 1; letter-spacing: -0.01em">Ground</h3>
-<p style="margin: 0; font-size: 16px; color: rgba(244,237,224,0.82)">We run the outreach, meetings and closing steps that it takes to hit your number, and track them in your playbook.</p>
 </div>
 </div>
 </div>
@@ -289,96 +143,30 @@ html{scroll-behavior:auto}
 <div style="background: #F4EDE0; color: #0F2E33">
 
 <section id="offer" style="background: #F4EDE0">
-<div style="max-width: 1240px; margin: 0 auto; padding: clamp(72px, 9vw, 128px) clamp(20px, 5vw, 72px); display: flex; flex-direction: column; gap: clamp(40px, 5vw, 64px)">
+<div style="max-width: 1240px; margin: 0 auto; padding: clamp(88px, 11vw, 152px) clamp(20px, 5vw, 72px); display: flex; flex-direction: column; gap: clamp(48px, 6vw, 72px)">
 <div style="display: flex; flex-direction: column; gap: 24px">
-<h2 class="reveal" style="margin: 0; max-width: 720px; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.8vw, 52px); line-height: 1.05; letter-spacing: -0.01em">Four jobs no first hire can do alone.</h2>
+<h2 class="reveal" style="margin: 0; max-width: 720px; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(36px, 4.2vw, 60px); line-height: 1.04; letter-spacing: -0.01em">What you get.</h2>
 </div>
-<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; border-top: 2px solid #0F2E33">
-<li class="job reveal" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 40px; padding: 32px 0; border-bottom: 1px solid rgba(15,46,51,0.2)">
+<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column">
+<li class="job" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 40px; padding: 32px 0; border-bottom: 1px solid rgba(15,46,51,0.2)">
 <span style="flex: 0 0 48px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 17px; color: #5C7478; font-variant-numeric: tabular-nums">01</span>
 <h3 style="flex: 1 1 300px; min-width: 0; margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(24px, 2.4vw, 30px); line-height: 1.15; letter-spacing: -0.01em">A strategy built for DACH</h3>
-<p style="flex: 1.3 1 360px; min-width: 0; margin: 0; color: #3F5A5E">You get a strategy that runs from your board goal down to daily activity, built for German, Austrian and Swiss buyers. Not translated from your US playbook.</p>
+<p style="flex: 1.3 1 360px; min-width: 0; margin: 0; color: #3F5A5E">From your board goal down to daily action, built for DACH buyers.</p>
 </li>
-<li class="job reveal" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 40px; padding: 32px 0; border-bottom: 1px solid rgba(15,46,51,0.2)">
+<li class="job" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 40px; padding: 32px 0; border-bottom: 1px solid rgba(15,46,51,0.2)">
 <span style="flex: 0 0 48px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 17px; color: #5C7478; font-variant-numeric: tabular-nums">02</span>
 <h3 style="flex: 1 1 300px; min-width: 0; margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(24px, 2.4vw, 30px); line-height: 1.15; letter-spacing: -0.01em">Prospecting that opens doors</h3>
-<p style="flex: 1.3 1 360px; min-width: 0; margin: 0; color: #3F5A5E">We reach your prospects in German. AI-assisted email sequences are the base, the phone and LinkedIn come on top. We book and run first meetings with the people who decide.</p>
+<p style="flex: 1.3 1 360px; min-width: 0; margin: 0; color: #3F5A5E">We book and run first meetings with the people who decide.</p>
 </li>
-<li class="job reveal" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 40px; padding: 32px 0; border-bottom: 1px solid rgba(15,46,51,0.2)">
+<li class="job" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 40px; padding: 32px 0; border-bottom: 1px solid rgba(15,46,51,0.2)">
 <span style="flex: 0 0 48px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 17px; color: #5C7478; font-variant-numeric: tabular-nums">03</span>
 <h3 style="flex: 1 1 300px; min-width: 0; margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(24px, 2.4vw, 30px); line-height: 1.15; letter-spacing: -0.01em">Deals architected to close</h3>
-<p style="flex: 1.3 1 360px; min-width: 0; margin: 0; color: #3F5A5E">We take your deals through buying committees, business cases, procurement, legal and security reviews. We map, run and refine every step from first meeting to signature until it repeats.</p>
+<p style="flex: 1.3 1 360px; min-width: 0; margin: 0; color: #3F5A5E">We run every step from first meeting to signature until it’s repeatable.</p>
 </li>
-<li class="job reveal" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 40px; padding: 32px 0">
+<li class="job" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 40px; padding: 32px 0">
 <span style="flex: 0 0 48px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 17px; color: #5C7478; font-variant-numeric: tabular-nums">04</span>
 <h3 style="flex: 1 1 300px; min-width: 0; margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(24px, 2.4vw, 30px); line-height: 1.15; letter-spacing: -0.01em">A playbook your team can run</h3>
-<p style="flex: 1.3 1 360px; min-width: 0; margin: 0; color: #3F5A5E">We write down every step that works as it’s proven. We interview the people you hire in German, then train and coach them on it until they close without us. You get a playbook that is handover-ready from day one.</p>
-</li>
-</ol>
-</div>
-</section>
-
-<section id="deals" style="padding: 0 0 clamp(88px, 11vw, 152px)">
-<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px)">
-<div style="border-top: 1px solid rgba(15,46,51,0.16); padding-top: clamp(88px, 11vw, 152px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 24px clamp(48px, 7vw, 112px); align-items: end">
-<h2 style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(36px, 4.2vw, 60px); line-height: 1.04; letter-spacing: -0.01em; text-wrap: balance">From first touch to go-live.</h2>
-<p style="margin: 0; max-width: 560px; font-size: 20px; line-height: 1.5; color: rgba(15,46,51,0.82)">Enterprise deals in DACH run through buying committees, procurement and security reviews. And they don’t end at signature: your buyers want their seller in the room until your product is live and in use. We stay as long as needed.</p>
-</div>
-<ol class="dpath" style="margin: clamp(56px, 7vw, 88px) 0 0; padding: 0; list-style: none">
-<li style="min-width: 0; display: flex; flex-direction: column">
-<div aria-hidden="true" style="display: flex; align-items: center; height: 28px; margin-right: -16px">
-<div style="width: 15px; height: 15px; border-radius: 50%; background: #EB5E2C; flex: 0 0 auto"></div>
-<div class="dp1 dp-bar" style="flex: 1 1 auto; height: 3px; background: #EB5E2C"></div>
-</div>
-<h3 style="margin: 24px 0 0; min-height: 52px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 21px; line-height: 26px; letter-spacing: -0.01em">First touch</h3>
-<p style="margin: 10px 0 0; padding-right: 6px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.8)">Email first, the phone and LinkedIn on top, always in German.</p>
-</li>
-<li style="min-width: 0; display: flex; flex-direction: column">
-<div aria-hidden="true" style="display: flex; align-items: center; height: 28px; margin-right: -16px">
-<div style="width: 15px; height: 15px; border-radius: 50%; background: #EB5E2C; flex: 0 0 auto"></div>
-<div class="dp2 dp-bar" style="flex: 1 1 auto; height: 3px; background: #EB5E2C"></div>
-</div>
-<h3 style="margin: 24px 0 0; min-height: 52px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 21px; line-height: 26px; letter-spacing: -0.01em">Discovery</h3>
-<p style="margin: 10px 0 0; padding-right: 6px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.8)">The real problem, the real budget, and who decides.</p>
-</li>
-<li style="min-width: 0; display: flex; flex-direction: column">
-<div aria-hidden="true" style="display: flex; align-items: center; height: 28px; margin-right: -16px">
-<div style="width: 15px; height: 15px; border-radius: 50%; background: #EB5E2C; flex: 0 0 auto"></div>
-<div class="dp3 dp-bar" style="flex: 1 1 auto; height: 3px; background: #EB5E2C"></div>
-</div>
-<h3 style="margin: 24px 0 0; min-height: 52px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 21px; line-height: 26px; letter-spacing: -0.01em">Business case</h3>
-<p style="margin: 10px 0 0; padding-right: 6px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.8)">Numbers their CFO accepts, in their language.</p>
-</li>
-<li style="min-width: 0; display: flex; flex-direction: column">
-<div aria-hidden="true" style="display: flex; align-items: center; height: 28px; margin-right: -16px">
-<div style="width: 15px; height: 15px; border-radius: 50%; background: #EB5E2C; flex: 0 0 auto"></div>
-<div class="dp4 dp-bar" style="flex: 1 1 auto; height: 3px; background: #EB5E2C"></div>
-</div>
-<h3 style="margin: 24px 0 0; min-height: 52px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 21px; line-height: 26px; letter-spacing: -0.01em">Buying committee</h3>
-<p style="margin: 10px 0 0; padding-right: 6px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.8)">Every stakeholder mapped and won, not only the champion.</p>
-</li>
-<li style="min-width: 0; display: flex; flex-direction: column">
-<div aria-hidden="true" style="display: flex; align-items: center; height: 28px; margin-right: -16px">
-<div style="width: 15px; height: 15px; border-radius: 50%; background: #EB5E2C; flex: 0 0 auto"></div>
-<div class="dp5 dp-bar" style="flex: 1 1 auto; height: 3px; background: #EB5E2C"></div>
-</div>
-<h3 style="margin: 24px 0 0; min-height: 52px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 21px; line-height: 26px; letter-spacing: -0.01em">Procurement</h3>
-<p style="margin: 10px 0 0; padding-right: 6px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.8)">Legal, IT security and data protection, planned before they come up.</p>
-</li>
-<li style="min-width: 0; display: flex; flex-direction: column">
-<div aria-hidden="true" style="display: flex; align-items: center; height: 28px; margin-right: -16px">
-<div style="width: 15px; height: 15px; border-radius: 50%; background: #EB5E2C; flex: 0 0 auto"></div>
-<div class="dp6 dp-bar" style="flex: 1 1 auto; height: 3px; background: #EB5E2C"></div>
-</div>
-<h3 style="margin: 24px 0 0; min-height: 52px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 21px; line-height: 26px; letter-spacing: -0.01em">Signature</h3>
-<p style="margin: 10px 0 0; padding-right: 6px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.8)">A close date both sides worked toward.</p>
-</li>
-<li style="min-width: 0; display: flex; flex-direction: column">
-<div aria-hidden="true" style="display: flex; align-items: center; height: 28px; margin-right: 0px">
-<div style="width: 15px; height: 15px; border-radius: 50%; background: #EB5E2C; flex: 0 0 auto"></div>
-</div>
-<h3 style="margin: 24px 0 0; min-height: 52px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 21px; line-height: 26px; letter-spacing: -0.01em">Go-live</h3>
-<p style="margin: 10px 0 0; padding-right: 6px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.8)">A clean handover to implementation, then a push until your product is used.</p>
+<p style="flex: 1.3 1 360px; min-width: 0; margin: 0; color: #3F5A5E">We interview your hires in German and coach them how to close without us.</p>
 </li>
 </ol>
 </div>
@@ -389,10 +177,25 @@ html{scroll-behavior:auto}
 <div class="reveal" style="background: #0F2E33; color: #F4EDE0; border-radius: 6px; padding: clamp(32px, 5vw, 64px); display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px 64px">
 <div style="flex: 1 1 480px; min-width: 0">
 <p style="margin: 0 0 16px; font-size: 15px; font-weight: 600; color: rgba(244,237,224,0.75)">Case study</p>
-<h2 style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(36px, 4.2vw, 60px); line-height: 1.04; letter-spacing: -0.01em">Signature is halftime.</h2>
-<p style="margin: 20px 0 0; max-width: 560px; font-size: 18px; line-height: 1.55; color: rgba(244,237,224,0.85)">One group-wide enterprise deal in DACH, from the first demo to the rollout. What got it signed, where it slowed down afterward, and what changed.</p>
+<h2 style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.6vw, 52px); line-height: 1.08; letter-spacing: -0.01em; text-wrap: balance">How we turned a single enthusiastic contact into €25M in annual spend</h2>
+<p style="margin: 20px 0 0; max-width: 560px; font-size: 18px; line-height: 1.55; color: rgba(244,237,224,0.85)">One champion. Ten departments. 15,000 users.</p>
 </div>
 <a href="/case-study" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 28px; background: #EB5E2C; border-radius: 4px; color: #0F2E33; font-weight: 700; font-size: 18px; text-decoration: none; white-space: nowrap">Read the case study</a>
+</div>
+</div>
+</section>
+
+<section id="problem" style="background: #F4EDE0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px) clamp(88px, 11vw, 152px)">
+<div style="border-top: 1px solid rgba(15,46,51,0.16); padding-top: clamp(88px, 11vw, 152px); display: flex; flex-direction: column; gap: clamp(48px, 6vw, 72px)">
+<div style="min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<h2 class="reveal" style="margin: 0; max-width: 900px; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(36px, 4.2vw, 60px); line-height: 1.04; letter-spacing: -0.01em">Did you know?</h2>
+<p style="margin: 16px 0 0; max-width: 640px; font-size: 20px; line-height: 1.5; color: rgba(15,46,51,0.85)">Most companies pay for their first year in DACH twice.<br>You need a deep understanding of German buyers, and it’s hard to tell which local hire will make it work.</p>
+<p style="margin: -4px 0 0; max-width: 640px; font-size: 20px; line-height: 1.5; color: rgba(15,46,51,0.85)">It usually goes like this: a seller from another market takes the lead, local candidates are hard to assess, the team slides into firefighting, good people leave, and the next hire starts from scratch.</p>
+</div>
+<div style="min-width: 0; display: flex; flex-direction: column">
+<div class="reveal" style="margin-top: 0; background: #0F2E33; color: #F4EDE0; padding: 28px 32px; border-radius: 4px; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(24px, 2.4vw, 30px); line-height: 1.15; letter-spacing: -0.01em">Know the market first. Then hire for it.</div>
+</div>
 </div>
 </div>
 </section>
@@ -418,7 +221,7 @@ html{scroll-behavior:auto}
 <div style="border-top: 1px solid rgba(15,46,51,0.16); padding-top: clamp(88px, 11vw, 152px)">
 <h2 style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(36px, 4.2vw, 60px); line-height: 1.04; letter-spacing: -0.01em">The record, at a glance.</h2>
 <div style="margin-top: clamp(48px, 6vw, 72px); display: flex; flex-wrap: wrap; gap: 16px">
-<div style="flex: 2 1 520px; min-height: 380px; box-sizing: border-box; position: relative; overflow: hidden; background: #0F2E33; color: #F4EDE0; border-radius: 6px; padding: clamp(28px, 3vw, 40px); display: flex; flex-direction: column; justify-content: space-between; gap: 32px">
+<div style="flex: 1.3 1 480px; min-height: 480px; box-sizing: border-box; position: relative; overflow: hidden; background: #0F2E33; color: #F4EDE0; border-radius: 6px; padding: clamp(28px, 3vw, 40px); display: flex; flex-direction: column; justify-content: space-between; gap: 32px">
 <div aria-hidden="true" style="position: absolute; inset: 0px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); opacity: 0.9">
 <div class="col colB" style="animation-duration: 22s; animation-delay: -7s"></div>
 <div class="col colA" style="animation-duration: 18s; animation-delay: -12s"></div>
@@ -427,44 +230,185 @@ html{scroll-behavior:auto}
 <div class="col colC" style="animation-duration: 23s; animation-delay: -14s"></div>
 </div>
 <p style="position: relative; margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(96px, 11vw, 168px); line-height: 0.9; letter-spacing: -0.04em">#1</p>
-<p style="position: relative; margin: 0; max-width: 520px; font-size: 24px; line-height: 1.3">Largest deal in company history, signed 12 months after joining a European SaaS scale-up</p>
+<p style="position: relative; margin: 0; max-width: 520px; font-size: 24px; line-height: 1.3; text-wrap: balance">Largest deal in company history, signed 12 months after joining a European SaaS <span style="white-space: nowrap">scale-up</span></p>
 </div>
-<div style="flex: 1 1 400px; min-height: 380px; box-sizing: border-box; background: #EB5E2C; color: #0F2E33; border-radius: 6px; padding: clamp(28px, 3vw, 40px); display: flex; flex-direction: column; justify-content: space-between; gap: 32px">
+<div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<div style="flex: 1 1 auto; box-sizing: border-box; background: #EB5E2C; color: #0F2E33; border-radius: 6px; padding: clamp(28px, 3vw, 40px); display: flex; flex-direction: column; justify-content: space-between; gap: 32px">
 <p style="position: relative; margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(56px, 5.6vw, 84px); line-height: 0.9; letter-spacing: -0.04em">20,000+</p>
-<p style="position: relative; margin: 0; max-width: 520px; font-size: 24px; line-height: 1.3">cold calls into DACH</p>
+<p style="position: relative; margin: 0; max-width: 520px; font-size: 24px; line-height: 1.3; text-wrap: balance">cold calls into DACH</p>
 </div>
-<div style="flex: 2 1 400px; min-height: 300px; box-sizing: border-box; background: #E6DCCA; border-radius: 6px; padding: clamp(28px, 3vw, 40px); display: flex; flex-direction: column; justify-content: space-between; gap: 32px">
-<p style="position: relative; margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(52px, 5vw, 76px); line-height: 0.9; letter-spacing: -0.04em">Thousands</p>
-<p style="position: relative; margin: 0; max-width: 520px; font-size: 24px; line-height: 1.3">of cold emails written for DACH buyers</p>
+<div style="flex: 1 1 auto; box-sizing: border-box; border: 1.5px solid #0F2E33; border-radius: 6px; padding: clamp(28px, 3vw, 40px); display: flex; flex-direction: column; justify-content: space-between; gap: 32px">
+<p style="position: relative; margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(56px, 5.6vw, 84px); line-height: 0.9; letter-spacing: -0.04em">6</p>
+<p style="position: relative; margin: 0; max-width: 520px; font-size: 24px; line-height: 1.3; text-wrap: balance">months to quota, where most reps need around 18. The fastest in the history of a European fintech’s German office.</p>
 </div>
-<div style="flex: 1 1 260px; min-height: 300px; box-sizing: border-box; border: 1.5px solid #0F2E33; border-radius: 6px; padding: clamp(28px, 3vw, 40px); display: flex; flex-direction: column; justify-content: space-between; gap: 32px">
-<p style="position: relative; margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(72px, 8vw, 120px); line-height: 0.9; letter-spacing: -0.04em">6</p>
-<p style="position: relative; margin: 0; max-width: 520px; font-size: 24px; line-height: 1.3">months to quota, where most reps need around 18. The fastest in the history of a European fintech’s German office.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
 
+<section id="buyers" style="padding: 0 0 clamp(88px, 11vw, 152px)">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px)">
+<div style="border-top: 1px solid rgba(15,46,51,0.16); padding-top: clamp(88px, 11vw, 152px); display: flex; flex-direction: column; gap: 20px">
+<h2 class="reveal" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(36px, 4.2vw, 60px); line-height: 1.04; letter-spacing: -0.01em; text-wrap: balance">German buyers love objections.</h2>
+<p class="reveal" style="margin: 0; max-width: 560px; font-size: 20px; line-height: 1.5; color: rgba(15,46,51,0.82)">Each one has a reason rooted in German complexity.</p>
 </div>
+</div>
+<div class="marquee reveal" style="margin-top: clamp(48px, 6vw, 72px)">
+<div class="marquee-track" style="display: flex; width: max-content">
+<div style="display: flex; gap: 20px; padding-right: 20px">
+<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
+<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Schicken Sie mir mal Unterlagen.“</blockquote>
+<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“Send me some material.”</figcaption>
+</figure>
+<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
+<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Wo liegen Ihre Daten?“</blockquote>
+<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“Where is your data hosted?”</figcaption>
+</figure>
+<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
+<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Das müssen wir intern abstimmen.“</blockquote>
+<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“We need to align internally.”</figcaption>
+</figure>
+<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
+<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Haben Sie Referenzen aus Deutschland?“</blockquote>
+<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“Do you have German references?”</figcaption>
+</figure>
+<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
+<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Melden Sie sich im neuen Quartal.“</blockquote>
+<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“Call me next quarter.”</figcaption>
+</figure>
+<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
+<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Gibt es den Vertrag auch auf Deutsch?“</blockquote>
+<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“Is the contract available in German?”</figcaption>
+</figure>
+<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
+<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Wer ist Ihr Ansprechpartner vor Ort?“</blockquote>
+<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“Who is your local contact?”</figcaption>
+</figure>
+</div>
+<div aria-hidden="true" style="display: flex; gap: 20px; padding-right: 20px">
+<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
+<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Schicken Sie mir mal Unterlagen.“</blockquote>
+<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“Send me some material.”</figcaption>
+</figure>
+<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
+<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Wo liegen Ihre Daten?“</blockquote>
+<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“Where is your data hosted?”</figcaption>
+</figure>
+<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
+<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Das müssen wir intern abstimmen.“</blockquote>
+<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“We need to align internally.”</figcaption>
+</figure>
+<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
+<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Haben Sie Referenzen aus Deutschland?“</blockquote>
+<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“Do you have German references?”</figcaption>
+</figure>
+<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
+<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Melden Sie sich im neuen Quartal.“</blockquote>
+<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“Call me next quarter.”</figcaption>
+</figure>
+<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
+<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Gibt es den Vertrag auch auf Deutsch?“</blockquote>
+<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“Is the contract available in German?”</figcaption>
+</figure>
+<figure style="margin: 0; flex: 0 0 auto; width: 340px; box-sizing: border-box; border: 1px solid rgba(15,46,51,0.18); border-radius: 6px; padding: 28px">
+<blockquote lang="de" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em">„Wer ist Ihr Ansprechpartner vor Ort?“</blockquote>
+<figcaption style="margin-top: 16px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.75)">“Who is your local contact?”</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
 
-<section id="start" style="background: #F4EDE0; color: #0F2E33; scroll-margin-top: clamp(88px, 11vw, 152px)">
-<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px) clamp(88px, 11vw, 152px); display: flex; flex-wrap: wrap; align-items: flex-start; gap: 56px 80px">
-<div style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
-<h2 class="reveal" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(36px, 4.2vw, 60px); line-height: 1.04; letter-spacing: -0.01em; text-wrap: balance">Start with 90 days. Decide with evidence.</h2>
-<div style="position: relative; margin-top: 16px; padding-left: 3px">
+<section id="deals" style="padding: 0 0 clamp(88px, 11vw, 152px)">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px)">
+<div style="border-top: 1px solid rgba(15,46,51,0.16); padding-top: clamp(88px, 11vw, 152px); display: grid; grid-template-columns: minmax(0, 1fr)">
+<h2 style="margin: 0; max-width: 900px; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(36px, 4.2vw, 60px); line-height: 1.04; letter-spacing: -0.01em; text-wrap: balance">The key phases every deal walks through in DACH.</h2>
+</div>
+<ol class="dpath" style="margin: clamp(48px, 6vw, 72px) 0 0; padding: 0; list-style: none">
+<li style="min-width: 0; display: flex; flex-direction: column">
+<div aria-hidden="true" style="display: flex; align-items: center; height: 28px; margin-right: -16px">
+<div style="position: relative; z-index: 1; width: 15px; height: 15px; border-radius: 50%; background: #EB5E2C; flex: 0 0 auto"></div>
+<div class="dp1 dp-bar" style="flex: 1 1 auto; height: 3px; background: #EB5E2C; margin-right: -6px"></div>
+</div>
+<h3 style="margin: 24px 0 0; min-height: 52px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 21px; line-height: 26px; letter-spacing: -0.01em">First touch</h3>
+<p style="margin: 10px 0 0; padding-right: 6px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.8)">Email first, the phone and LinkedIn on top, always in German.</p>
+</li>
+<li style="min-width: 0; display: flex; flex-direction: column">
+<div aria-hidden="true" style="display: flex; align-items: center; height: 28px; margin-right: -16px">
+<div style="position: relative; z-index: 1; width: 15px; height: 15px; border-radius: 50%; background: #EB5E2C; flex: 0 0 auto"></div>
+<div class="dp2 dp-bar" style="flex: 1 1 auto; height: 3px; background: #EB5E2C; margin-right: -6px"></div>
+</div>
+<h3 style="margin: 24px 0 0; min-height: 52px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 21px; line-height: 26px; letter-spacing: -0.01em">Discovery</h3>
+<p style="margin: 10px 0 0; padding-right: 6px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.8)">The real problem, the real budget, and who decides.</p>
+</li>
+<li style="min-width: 0; display: flex; flex-direction: column">
+<div aria-hidden="true" style="display: flex; align-items: center; height: 28px; margin-right: -16px">
+<div style="position: relative; z-index: 1; width: 15px; height: 15px; border-radius: 50%; background: #EB5E2C; flex: 0 0 auto"></div>
+<div class="dp3 dp-bar" style="flex: 1 1 auto; height: 3px; background: #EB5E2C; margin-right: -6px"></div>
+</div>
+<h3 style="margin: 24px 0 0; min-height: 52px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 21px; line-height: 26px; letter-spacing: -0.01em">Business case</h3>
+<p style="margin: 10px 0 0; padding-right: 6px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.8)">Numbers their CFO accepts, in their language.</p>
+</li>
+<li style="min-width: 0; display: flex; flex-direction: column">
+<div aria-hidden="true" style="display: flex; align-items: center; height: 28px; margin-right: -16px">
+<div style="position: relative; z-index: 1; width: 15px; height: 15px; border-radius: 50%; background: #EB5E2C; flex: 0 0 auto"></div>
+<div class="dp4 dp-bar" style="flex: 1 1 auto; height: 3px; background: #EB5E2C; margin-right: -6px"></div>
+</div>
+<h3 style="margin: 24px 0 0; min-height: 52px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 21px; line-height: 26px; letter-spacing: -0.01em">Buying committee</h3>
+<p style="margin: 10px 0 0; padding-right: 6px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.8)">Every stakeholder mapped and won, not only the champion.</p>
+</li>
+<li style="min-width: 0; display: flex; flex-direction: column">
+<div aria-hidden="true" style="display: flex; align-items: center; height: 28px; margin-right: -16px">
+<div style="position: relative; z-index: 1; width: 15px; height: 15px; border-radius: 50%; background: #EB5E2C; flex: 0 0 auto"></div>
+<div class="dp5 dp-bar" style="flex: 1 1 auto; height: 3px; background: #EB5E2C; margin-right: -6px"></div>
+</div>
+<h3 style="margin: 24px 0 0; min-height: 52px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 21px; line-height: 26px; letter-spacing: -0.01em">Procurement</h3>
+<p style="margin: 10px 0 0; padding-right: 6px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.8)">Legal, IT security and data protection, planned before they come up.</p>
+</li>
+<li style="min-width: 0; display: flex; flex-direction: column">
+<div aria-hidden="true" style="display: flex; align-items: center; height: 28px; margin-right: -16px">
+<div style="position: relative; z-index: 1; width: 15px; height: 15px; border-radius: 50%; background: #EB5E2C; flex: 0 0 auto"></div>
+<div class="dp6 dp-bar" style="flex: 1 1 auto; height: 3px; background: #EB5E2C; margin-right: -6px"></div>
+</div>
+<h3 style="margin: 24px 0 0; min-height: 52px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 21px; line-height: 26px; letter-spacing: -0.01em">Signature</h3>
+<p style="margin: 10px 0 0; padding-right: 6px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.8)">A close date both sides worked toward.</p>
+</li>
+<li style="min-width: 0; display: flex; flex-direction: column">
+<div aria-hidden="true" style="display: flex; align-items: center; height: 28px; margin-right: 0px">
+<div style="position: relative; z-index: 1; width: 15px; height: 15px; border-radius: 50%; background: #EB5E2C; flex: 0 0 auto"></div>
+</div>
+<h3 style="margin: 24px 0 0; min-height: 52px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 21px; line-height: 26px; letter-spacing: -0.01em">Go-live</h3>
+<p style="margin: 10px 0 0; padding-right: 6px; font-size: 15px; line-height: 1.5; color: rgba(15,46,51,0.8)">A clean handover to implementation, then a push until your product is used.</p>
+</li>
+</ol>
+</div>
+</section>
+
+<section id="start" style="background: #F4EDE0; color: #0F2E33">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px) clamp(88px, 11vw, 152px)">
+<div style="border-top: 1px solid rgba(15,46,51,0.16); padding-top: clamp(88px, 11vw, 152px); display: flex; justify-content: center">
+<div style="flex: 0 1 720px; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 24px">
+<h2 class="reveal" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(36px, 4.2vw, 60px); line-height: 1.04; letter-spacing: -0.01em; text-wrap: balance; text-align: center">Start with 90 days. Decide with evidence.</h2>
+<div style="position: relative; margin-top: 16px; padding-left: 9px">
 <ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column">
 <li style="position: relative; padding: 0 0 32px 32px; display: flex; flex-direction: column; gap: 6px">
 <div class="gy" aria-hidden="true" style="position: absolute; left: -3px; top: 13px; bottom: -14px; width: 3px; background: #EB5E2C"></div>
 <div aria-hidden="true" style="position: absolute; left: -9px; top: 6px; width: 15px; height: 15px; border-radius: 50%; background: #EB5E2C"></div>
+<h3 style="margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 22px; line-height: 1.25">First assessment (No cost)</h3>
+<p style="margin: 0; font-size: 16px; color: #3F5A5E">A 30-minute call about your product and your Europe setup. You get our honest first read on DACH: demand, blockers, and we agree on what the first 90 days have to deliver and how to move forward.</p>
+</li>
+<li style="position: relative; padding: 0 0 32px 32px; display: flex; flex-direction: column; gap: 6px">
+<div class="gy" aria-hidden="true" style="position: absolute; left: -3px; top: 13px; bottom: -14px; width: 3px; background: #EB5E2C"></div>
+<div aria-hidden="true" style="position: absolute; left: -9px; top: 6px; width: 15px; height: 15px; border-radius: 50%; background: #EB5E2C"></div>
 <h3 style="margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 22px; line-height: 1.25">First weeks</h3>
-<p style="margin: 0; font-size: 16px; color: #3F5A5E">We agree on your DACH goal and a 12 to 24 month plan with your leadership team.</p>
+<p style="margin: 0; font-size: 16px; color: #3F5A5E">We agree on your DACH goal and a 12-month plan with your leadership team.</p>
 </li>
 <li style="position: relative; padding: 0 0 32px 32px; display: flex; flex-direction: column; gap: 6px">
 <div class="gy" aria-hidden="true" style="position: absolute; left: -3px; top: 13px; bottom: -14px; width: 3px; background: #EB5E2C"></div>
 <div aria-hidden="true" style="position: absolute; left: -9px; top: 6px; width: 15px; height: 15px; border-radius: 50%; background: #EB5E2C"></div>
 <h3 style="margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 22px; line-height: 1.25">From then on</h3>
-<p style="margin: 0; font-size: 16px; color: #3F5A5E">We reach out to your prospects in German: AI-assisted email sequences as the base, the phone and LinkedIn on top. We book and run the meetings and adjust the plan every week. We document the closing process as it’s proven, so you can hand it over.</p>
+<p style="margin: 0; font-size: 16px; color: #3F5A5E">We reach out to your prospects in German. We book and run the meetings and adjust the plan every week. We document the closing process as it’s proven, so you can hand it over.</p>
 </li>
 <li style="position: relative; padding: 0 0 4px 32px; display: flex; flex-direction: column; gap: 6px">
 <div aria-hidden="true" style="position: absolute; left: -9px; top: 6px; width: 15px; height: 15px; border-radius: 50%; background: #EB5E2C"></div>
@@ -473,20 +417,37 @@ html{scroll-behavior:auto}
 </li>
 </ol>
 </div>
+<a href="#book" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 30px; margin-top: 8px; background: #EB5E2C; color: #0F2E33; font-weight: 700; font-size: 19px; text-decoration: none; border-radius: 4px">Book a call</a>
 </div>
-<div class="reveal" style="flex: 1 1 400px; min-width: 0; background: #0F2E33; color: #F4EDE0; border-radius: 6px; padding: clamp(28px, 4vw, 48px); display: flex; flex-direction: column; gap: 32px">
-<dl style="margin: 0; display: flex; flex-direction: column">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 2px 24px; padding: 0 0 16px; border-bottom: 1px solid rgba(244,237,224,0.16)"><dt style="font-size: 14px; color: rgba(244,237,224,0.7)">Time</dt><dd style="margin: 0; font-weight: 600">2 days a week, split across the week</dd></div>
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 2px 24px; padding: 16px 0; border-bottom: 1px solid rgba(244,237,224,0.16)"><dt style="font-size: 14px; color: rgba(244,237,224,0.7)">Billing</dt><dd style="margin: 0; font-weight: 600">Monthly</dd></div>
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 2px 24px; padding: 16px 0; border-bottom: 1px solid rgba(244,237,224,0.16)"><dt style="font-size: 14px; color: rgba(244,237,224,0.7)">Start</dt><dd style="margin: 0; font-weight: 600">90-day test phase</dd></div>
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 2px 24px; padding: 16px 0; border-bottom: 1px solid rgba(244,237,224,0.16)"><dt style="font-size: 14px; color: rgba(244,237,224,0.7)">Upside</dt><dd style="margin: 0; font-weight: 600">Result-based, tied to the deals closed</dd></div>
-</dl>
-<div style="display: flex; flex-direction: column; gap: 12px">
-<div style="font-size: 15px; font-weight: 600; color: rgba(244,237,224,0.7)">What we commit to</div>
-<div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700; font-size: clamp(22px, 2.2vw, 27px); line-height: 1.2; letter-spacing: -0.01em">We book and run first meetings with your prospects within the first three months.</div>
-<p style="margin: 0; font-size: 15px; color: rgba(244,237,224,0.78)">And you get a plain answer on whether a problem is sales or product. We don’t promise a number of meetings or deals: nobody can honestly give one for a market that hasn’t been tested yet.</p>
 </div>
-<a href="#book" style="background: #EB5E2C; display: flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 32px; border-radius: 4px; color: #0A2226; font-weight: 700; font-size: 18px; text-decoration: none">Book a call</a>
+</div>
+</section>
+
+<div aria-hidden="true" style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px)"><div style="border-top: 1px solid rgba(15,46,51,0.16)"></div></div>
+<section id="method" style="background: #F4EDE0; color: #0F2E33">
+<div style="max-width: 1240px; margin: 0 auto; padding: clamp(88px, 11vw, 152px) clamp(20px, 5vw, 72px); display: flex; flex-direction: column; gap: clamp(48px, 6vw, 72px)">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 24px 80px">
+<div style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<h2 class="reveal" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(36px, 4.2vw, 60px); line-height: 1.04; letter-spacing: -0.01em">Goal-to-Ground</h2>
+</div>
+<p style="flex: 1 1 400px; min-width: 0; margin: 0; color: rgba(15,46,51,0.82)">A strategy only works when it reaches the front line. We build yours for DACH, prove it with real buyers and adjust it every week.</p>
+</div>
+<div class="g2g" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 20px; align-items: start">
+<div class="reveal" style="border-top: 4px solid #EB5E2C; background: #0F2E33; color: #F4EDE0; padding: 28px 28px 32px; display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 15px; font-weight: 600; color: rgba(244,237,224,0.7)">Level 1</div>
+<h3 style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 36px; line-height: 1; letter-spacing: -0.01em">Goal</h3>
+<p style="margin: 0; font-size: 16px; color: rgba(244,237,224,0.82)">We pin down where you want to stand in DACH: revenue target, legal setup, local entity or not.</p>
+</div>
+<div class="step2 reveal rv2" style="border-top: 4px solid #EB5E2C; background: #0F2E33; color: #F4EDE0; padding: 28px 28px 32px; display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 15px; font-weight: 600; color: rgba(244,237,224,0.7)">Level 2</div>
+<h3 style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 36px; line-height: 1; letter-spacing: -0.01em">Plan</h3>
+<p style="margin: 0; font-size: 16px; color: rgba(244,237,224,0.82)">We map what your next 12 to 24 months have to deliver: team size, partnerships, product adjustments.</p>
+</div>
+<div class="step3 reveal rv3" style="border-top: 4px solid #EB5E2C; background: #0F2E33; color: #F4EDE0; padding: 28px 28px 32px; display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 15px; font-weight: 600; color: rgba(244,237,224,0.7)">Level 3</div>
+<h3 style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 36px; line-height: 1; letter-spacing: -0.01em">Ground</h3>
+<p style="margin: 0; font-size: 16px; color: rgba(244,237,224,0.82)">We run the outreach, meetings and closing steps that it takes to hit your number, and track them in your playbook.</p>
+</div>
 </div>
 </div>
 </section>
@@ -514,11 +475,11 @@ html{scroll-behavior:auto}
 </details>
 <details style="border-top: 1px solid rgba(15,46,51,0.16)">
 <summary style="display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 24px 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 22px; line-height: 1.3">Why not just hire a country manager?<svg class="faq-plus" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#0F2E33" stroke-width="2" style="flex: 0 0 auto; transition: transform 160ms ease"><path d="M10 3v14M3 10h14"></path></svg></summary>
-<p style="margin: 0; padding: 0 0 28px; max-width: 600px; font-size: 17px; color: rgba(15,46,51,0.82)">You should, once you know what to judge them on. We define the role with you, assess candidates in German, and train the person you hire on a playbook that already works in DACH. Then they take over.</p>
+<p style="margin: 0; padding: 0 0 28px; max-width: 600px; font-size: 17px; color: rgba(15,46,51,0.82)">A country manager is the right long-term step, and the role works best when it’s built around what DACH actually requires. We define the role with you, assess candidates in German, and train the person you hire on a playbook that already works in DACH. Then they take over.</p>
 </details>
 <details style="border-top: 1px solid rgba(15,46,51,0.16)">
 <summary style="display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 24px 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 22px; line-height: 1.3">Who is this not for?<svg class="faq-plus" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#0F2E33" stroke-width="2" style="flex: 0 0 auto; transition: transform 160ms ease"><path d="M10 3v14M3 10h14"></path></svg></summary>
-<p style="margin: 0; padding: 0 0 28px; max-width: 600px; font-size: 17px; color: rgba(15,46,51,0.82)">Companies that want to buy leads or appointments instead of a strategy, expect results in 30 days, or want to hand DACH off for good without building their own team. And anyone who would rather hear confirmation than an honest read.</p>
+<p style="margin: 0; padding: 0 0 28px; max-width: 600px; font-size: 17px; color: rgba(15,46,51,0.82)">It’s a poor fit if you’re looking for a lead or appointment service, need results within 30 days, or plan to hand DACH off for good without building your own team.</p>
 </details>
 <details style="border-top: 1px solid rgba(15,46,51,0.16); border-bottom: 1px solid rgba(15,46,51,0.16)">
 <summary style="display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 24px 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; font-size: 22px; line-height: 1.3">Germany, Austria or Switzerland?<svg class="faq-plus" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#0F2E33" stroke-width="2" style="flex: 0 0 auto; transition: transform 160ms ease"><path d="M10 3v14M3 10h14"></path></svg></summary>
@@ -529,15 +490,17 @@ html{scroll-behavior:auto}
 </div>
 </section>
 
+</div>
+
 <section id="book" style="padding: 0 0 clamp(88px, 11vw, 152px)">
 <div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px)">
-<div style="border-top: 1px solid rgba(244,237,224,0.16); padding-top: clamp(88px, 11vw, 152px)">
+<div style="padding-top: clamp(88px, 11vw, 152px)">
 <h2 class="reveal" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: clamp(44px, 6.4vw, 96px); line-height: 1; letter-spacing: -0.01em">
-<span style="display: block">Europe’s major league.</span>
-<span style="display: block; text-align: right; color: rgba(244,237,224,0.66)">Play it right.</span>
+<span style="display: block">Your first year in DACH,</span>
+<span style="display: block; text-align: right; color: rgba(244,237,224,0.66)">run by someone who sells.</span>
 </h2>
 <div style="margin-top: clamp(40px, 5vw, 64px); display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px 48px">
-<p style="margin: 0; max-width: 560px; font-size: clamp(18px, 1.5vw, 21px); line-height: 1.5; color: rgba(244,237,224,0.85)">Germany is Europe’s largest economy. Tell us where you want to stand in DACH. In the first call you’ll know whether we can help and what your first 90 days would look like.</p>
+<p style="margin: 0; max-width: 560px; font-size: clamp(18px, 1.5vw, 21px); line-height: 1.5; color: rgba(244,237,224,0.85)">Fractional GTM partner for B2B tech companies entering <span style="color: #EB5E2C; font-weight: 600">Germany, Austria and Switzerland</span>.</p>
 <div>
 <a href="#book" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 30px; background: #EB5E2C; color: #0F2E33; font-weight: 700; font-size: 19px; text-decoration: none; border-radius: 4px">Book a call</a>
 <p style="margin: 14px 0 0; font-size: 15px; line-height: 1.5; color: rgba(244,237,224,0.75)">Calls from 6 pm CET, noon on the US East Coast.<br>Or write to <a href="mailto:sales@starkgtm.com">sales@starkgtm.com</a></p>
@@ -579,10 +542,11 @@ html{scroll-behavior:auto}
 <dialog class="bk" id="book-dialog" aria-labelledby="book-title">
 <div class="bk-panel">
 <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px">
-<h2 id="book-title" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 36px; line-height: 1.05; letter-spacing: -0.01em">Book a call</h2>
+<h2 id="book-title" style="margin: 0; font-family: 'Charis SIL', Charter, 'Bitstream Charter', Georgia, serif; font-weight: 400; font-size: 36px; line-height: 1.05; letter-spacing: -0.01em">Your first DACH assessment</h2>
 <button type="button" class="bk-close" id="book-close">Close</button>
 </div>
-<p style="margin: 12px 0 24px; color: #3F5A5E">Leave your details and we will get back to you with a time. Calls run from 6 pm CET, noon on the US East Coast.</p>
+<p style="margin: 12px 0 0; color: #3F5A5E">Tell us about your product and where you stand in Europe. In a 30-minute call, you get our honest first read on your product in DACH: the potential, the risks to plan for, and what the first 90 days should look like.</p>
+<p style="margin: 12px 0 24px; color: #3F5A5E">No cost, no commitment.</p>
 <form id="book-form" novalidate style="display: flex; flex-direction: column; gap: 16px">
 <label for="book-name">Name<input id="book-name" name="name" type="text" autocomplete="name" required></label>
 <label for="book-company">Company<input id="book-company" name="company" type="text" autocomplete="organization" required></label>
@@ -606,9 +570,9 @@ html{scroll-behavior:auto}
   function el(id){ return document.getElementById(id); }
   function close(){ var d = el("book-dialog"); if (!d) return; if (d.close) d.close(); else d.removeAttribute("open"); }
   function toast(text){ var t = document.createElement("div"); t.setAttribute("role","status"); t.textContent = text;
-    t.style.cssText = "position:fixed;left:16px;right:16px;bottom:calc(24px + env(safe-area-inset-bottom,0px));margin:0 auto;width:fit-content;max-width:min(520px,calc(100vw - 32px));box-sizing:border-box;text-align:center;transform:translateY(12px);z-index:2147483647;padding:14px 20px;background:#F4EDE0;color:#0F2E33;border:2px solid #EB5E2C;border-radius:6px;font:600 16px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif;pointer-events:none;opacity:0;transition:opacity .3s,transform .3s;box-shadow:0 12px 32px rgba(10,34,38,.35)";
+    t.style.cssText = "position:fixed;left:50%;bottom:32px;transform:translate(-50%,12px);z-index:2147483647;max-width:calc(100vw - 32px);padding:16px 24px;background:#F4EDE0;color:#0F2E33;border:2px solid #EB5E2C;border-radius:6px;font:600 16px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif;pointer-events:none;opacity:0;transition:opacity .3s,transform .3s;box-shadow:0 12px 32px rgba(10,34,38,.35)";
     document.body.appendChild(t);
-    requestAnimationFrame(function(){ t.style.opacity = "1"; t.style.transform = "none"; });
+    requestAnimationFrame(function(){ t.style.opacity = "1"; t.style.transform = "translate(-50%,0)"; });
     setTimeout(function(){ t.style.opacity = "0"; setTimeout(function(){ if (t.parentNode) t.parentNode.removeChild(t); }, 400); }, 5000); }
   document.addEventListener("click", function(e){
     var t = e.target; if (!t || !t.closest) return;
